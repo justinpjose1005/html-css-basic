@@ -1,0 +1,55 @@
+/*Write our CSS code in here*/
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 40px;
+  border-top: 5px solid;
+  letter-spacing: 2px;
+}
+
+body {
+  background-color: #f69680;
+  color: #2e1263;
+  font-family: "Raleway", sans-serif;
+}
+
+img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 97vh;
+}
+
+button {
+  margin: 20px auto 0;
+  padding: 10px 15px;
+  background-color: #f69680;
+  color: #2e1263;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #2e1263;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  letter-spacing: 4px;
+}
+
+button:hover {
+  transition: 0.5s;
+  background-color: #2e1263;
+  color: #f69680;
+  text-decoration: underline;
+}
+
+p {
+  font-size: 15px;
+}

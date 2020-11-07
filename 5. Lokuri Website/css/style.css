@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+
+:root {
+  --primary-color: #047aed;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+h1,
+h2 {
+  line-height: 1.2;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+img {
+  width: 100%;
+}
+
+/*Nav Bar*/
+.navbar {
+  background-color: var(
+    --primary-color
+  ); /*whole navbar is colored blue as background*/
+  color: white; /*title colored white*/
+  height: 70px;
+}
+
+.navbar ul {
+  display: flex; /*Aligns the nav-links in horizontal manner*/
+}
+
+.navbar a {
+  color: white; /*nav-link text colored white*/
+  padding: 10px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  border-bottom: 2px white solid; /*brings the white line below the Home, Features, Docs links*/
+}
+
+.navbar .flex {
+  justify-content: space-between; /*brings space in-between the Title and nav-buttons*/
+}
+
+/*Showcase*/
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: white;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .grid {
+  overflow: visible;
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+.showcase-form {
+  position: relative;
+  top: 60px;
+  height: 350px;
+  width: 400px;
+  padding: 40px;
+  z-index: 100;
+  justify-self: flex-end;
+}
+
+.showcase-form .form-control {
+  margin: 30px 0;
+}
+
+.showcase-form input[type="text"],
+.showcase-form input[type="email"] {
+  border: 0;
+  border-bottom: 1px solid #b4becb;
+  width: 100%;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  outline: none;
+}
+
+.showcase::before,
+.showcase::after {
+  content: "";
+  position: absolute;
+  height: 100px;
+  bottom: -70px;
+  right: 0;
+  left: 0;
+  background: white;
+  transform: skewY(-3deg);
+  -webkit-transform: skewY(-3deg);
+  -moz-transform: skewY(-3deg);
+  -ms-transform: skewY(-3deg);
+}
+
+/*Utilities*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto; /*centers the content by equal space on the sides*/
+  overflow: auto; /*lets the blue background expand to the top of the screen*/
+  padding: 0 40px;
+}
+
+.card {
+  /*form design*/
+  background-color: white;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  margin: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px white solid;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.flex {
+  display: flex; /*deafult alignment is row vise*/
+  justify-content: center; /*aligns center horizontal of row*/
+  align-items: center; /*aligns center vertical of row*/
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    1fr
+  ); /*allots 2 columns for description & form on the sae row*/
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
